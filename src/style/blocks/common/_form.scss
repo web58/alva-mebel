@@ -1,0 +1,67 @@
+.form {
+  &__input {
+    font-size: 16px;
+    padding: 14px 28px;
+    width: 100%;
+    border: 1px solid var(--input-border-color, var(--gold-100));
+    border-radius: 8px;
+    appearance: none;
+
+    &.is-invalid {
+      border-color: var(--error);
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    height: 6em;
+  }
+
+  &__checkbox {
+    @include visually-hidden;
+
+    & + label {
+      position: relative;
+      padding-left: 42px;
+      display: inline-block;
+      font-size: 16px;
+      color: var(--gray-50);
+      cursor: pointer;
+      user-select: none;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 26px;
+        height: 26px;
+      }
+
+      &::before {
+        border: 1px solid var(--input-border-color, var(--gold-100));
+        border-radius: 8px;
+      }
+    }
+
+    &:focus-visible + label {
+      &::before {
+        box-shadow: 0 0 0 1px #FFFFFF, 0 0 0 2px #000000;
+      }
+    }
+
+    &:checked + label {
+      &::before {
+        background-color: var(--input-border-color, var(--gold-100));
+      }
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.25 3.5L6.75 9L14.75 1' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 14px 8px;
+      }
+    }
+  }
+}

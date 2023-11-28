@@ -1,0 +1,38 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  &__wrapper {
+    box-sizing: border-box;
+  }
+
+  &__pagination {
+    --swiper-theme-color: var(--gold-100);
+    --swiper-pagination-bullet-inactive-color: var(--gold-100);
+    --swiper-pagination-bullet-size: 6px;
+
+    text-align: center;
+    overflow: hidden;
+
+    & .swiper-pagination-bullet {
+      transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+    }
+
+    & .swiper-pagination-bullet-active {
+      transform: scale(1.33);
+    }
+  }
+}
+
+.slider-controls-btn {
+  display: inline-flex;
+  color: var(--accent);
+  border-radius: 50%;
+  pointer-events: auto;
+  overflow: hidden;
+  transition: opacity .2s ease-in-out;
+
+  &.swiper-button-disabled {
+    opacity: 0;
+  }
+}

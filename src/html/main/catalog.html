@@ -1,0 +1,22 @@
+<section class="mp-catalog">
+  <div class="container">
+    <h2 class="indent-reset title-md mp-catalog__title">Наша продукция</h2>
+    <div class="mp-catalog__inner">
+      <div data-tabs="mp-catalog">
+        <ul class="list-reset mp-catalog__nav catalog-tabs-nav"
+            data-tabs="nav">
+          @include('catalog-nav-template.html', {title: 'Стулья'})
+          @include('catalog-nav-template.html', {title: 'Столы'})
+          @include('catalog-nav-template.html', {title: 'Пуфы'})
+          @include('catalog-nav-template.html', {title: 'Обувницы и банкетки'})
+        </ul>
+        <div>
+          @include('catalog-panel-template.html')
+          @include('catalog-panel-template.html')
+          @include('catalog-panel-template.html')
+          @include('catalog-panel-template.html')
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

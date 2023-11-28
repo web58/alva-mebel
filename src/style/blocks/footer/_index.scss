@@ -1,0 +1,91 @@
+.site-footer {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  color: var(--gray-50);
+  background-color: var(--theme-bg-accent);
+  text-align: center;
+
+  &__logo {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    & img {
+      display: block;
+      width: 130px;
+      height: 46px;
+      margin: 0 auto;
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+
+  &__policy {
+    margin-bottom: 16px;
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  &__agreement {
+    margin-bottom: 50px;
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    &__logo {
+      margin-bottom: 50px;
+
+      & img {
+        width: 200px;
+        height: 70px;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__copyright {
+      margin-bottom: 0;
+    }
+
+    &__policy {
+      margin-bottom: 0;
+      font-size: 18px;
+
+      & a {
+        transition: color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+
+    &__agreement {
+      margin-bottom: 0;
+      font-size: 18px;
+
+      & a {
+        transition: color .2s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+        }
+      }
+    }
+  }
+}

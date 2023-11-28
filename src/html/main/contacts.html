@@ -1,0 +1,83 @@
+<section class="contact-us"
+         id="contact-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-5 col-xxl-3 offset-xxl-1">
+        <h2 class="indent-reset title-md contact-us__title">Остались вопросы?</h2>
+        <p class="indent-reset contact-us__subtitle">Свяжитесь с нами через форму и мы ответим вам как можно скорее</p>
+        <form class="form contact-us__form"
+              id="contact-us-form"
+              data-validate>
+          <input type="hidden"
+                 name="Страница"
+                 value="Главная">
+          <input type="hidden"
+                 name="Форма"
+                 value="Остались вопросы">
+          <div>
+            <input class="form__input"
+                   type="text"
+                   name="Имя"
+                   placeholder="Ваше имя"
+                   data-validate="name"
+                   required>
+          </div>
+          <div>
+            <input class="form__input"
+                   type="tel"
+                   name="Контактный&nbsp;телефон"
+                   placeholder="+7 (___) ___-__-__"
+                   data-validate="phone"
+                   required>
+          </div>
+          <div>
+            <input class="form__checkbox"
+                   type="checkbox"
+                   id="contact-us-confirm"
+                   data-validate="confirm"
+                   required>
+            <label for="contact-us-confirm">@include('../common/confirm-text.html')</label>
+          </div>
+          <div class="contact-us__submit">
+            <button class="btn-reset btn"
+                    type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-12 col-md-6 col-xl-4 col-xxl-4 offset-xl-1 offset-xxl-2">
+        <div class="contacts">
+          <h3 class="indent-reset outline-title contacts__title">Или приходите в гости</h3>
+          <div class="contacts__items">
+            <ul class="list-reset contacts__phones">
+              <li>
+                <a href="tel:+79379132111">+7 (937) 913-21-11</a>
+              </li>
+              <li>
+                <a href="tel:+79374132111">+7 (937) 413-21-11</a>
+              </li>
+            </ul>
+            @include('../common/messengers.html')
+            <div class="text-lg">
+              <span>Пензенская обл., г. Кузнецк, ул. Чехова, д. 2Б</span>
+            </div>
+            <div class="text-lg">
+              <span>пн-пт 8.30 – 17.30</span>
+            </div>
+            <ul class="list-reset text-lg contacts__emails">
+              <li>
+                <a href="mailto:alva_mebel58@mail.ru">alva_mebel58@mail.ru</a>
+              </li>
+            </ul>
+            @include('../common/socials.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-us__map">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ade84112297ba76b947d7cfa3ab69873f2e969189c7514837a1d68dda10fb3ed1&amp;source=constructor"
+            width="100%"
+            height="400"
+            frameborder="0"></iframe>
+  </div>
+</section>

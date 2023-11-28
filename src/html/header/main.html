@@ -1,0 +1,50 @@
+<div class="header-main">
+  <div class="container">
+    <div class="header-main__inner">
+      <div class="header-main__burger">
+        <button class="just-burger"
+                type="button"
+                aria-label="Меню"
+                id="just-burger">
+          <span class="just-burger__line just-burger__line--top"></span>
+          <span class="just-burger__line just-burger__line--middle"></span>
+          <span class="just-burger__line just-burger__line--bottom"></span>
+        </button>
+      </div>
+      <nav class="header-main__nav">
+        @include('nav.html')
+      </nav>
+      <div class="header-main__logo">
+        <a href="page-main.html">
+          <picture>
+            <source media="(min-width: 1200px)"
+                    width="134"
+                    height="47"
+                    srcset="img/logo/logo.svg">
+            <img src="img/logo/logo-without-text.svg"
+                 width="78"
+                 height="19"
+                 alt="Логотип Альва">
+          </picture>
+        </a>
+      </div>
+      <div class="header-main__cb ">
+        <div class="header-cb">
+          <div class="header-cb__phone">
+            <a href="tel:+79379132111">
+              <svg width="38"
+                   height="38"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>
+              <span>+7 (937) 913-21-11</span>
+            </a>
+          </div>
+          <button class="btn-reset header-cb__modal-trigger"
+                  type="button"
+                  data-hystmodal="#callback-modal">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

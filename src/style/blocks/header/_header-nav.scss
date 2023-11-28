@@ -1,0 +1,44 @@
+.header-nav {
+  @include list-reset;
+
+  margin-bottom: -24px;
+
+  & > li {
+    margin-bottom: 24px;
+  }
+
+  & a {
+    font-weight: 500;
+    color: var(--theme-text);
+    text-decoration-color: transparent;
+  }
+
+  @include media-min ($xl) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: -4px -15px;
+
+    & > li {
+      margin: 4px 15px;
+    }
+
+    & a {
+      white-space: nowrap;
+      transition: color .2s ease-in-out, text-decoration-color .2s ease-in-out;
+
+      &:hover {
+        color: var(--accent);
+        text-decoration-color: inherit;
+      }
+    }
+  }
+
+  @include media-min ($xxl) {
+    margin: -4px -25px;
+
+    & > li {
+      margin: 4px 25px;
+    }
+  }
+}

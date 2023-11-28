@@ -1,0 +1,46 @@
+.advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-bottom: 40px;
+
+    & span {
+      display: block;
+      color: var(--gold-100);
+    }
+  }
+
+  &__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__item-img {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+
+  &__item-descr {
+    @include cms-text;
+
+    margin-bottom: 30px;
+  }
+
+  @include media-min ($md) {
+    &__title {
+      text-align: center;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

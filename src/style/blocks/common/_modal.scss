@@ -1,0 +1,82 @@
+.modal {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 330px;
+  color: var(--theme-text);
+  background-color: var(--theme-bg);
+  border-radius: 8px;
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--theme-text);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  &__status-text {
+    text-align: center;
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 20px;
+  }
+
+  &__submit {
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    & > button {
+      width: 100%;
+    }
+  }
+
+  @include media-min ($md) {
+    padding: 40px;
+    max-width: 450px;
+  }
+
+  @include media-min ($xl) {
+    padding: 60px;
+    max-width: 600px;
+
+    &__close {
+      top: 4px;
+      right: 4px;
+      width: 48px;
+      height: 48px;
+
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__form {
+      row-gap: 24px;
+    }
+
+    &__submit {
+      max-width: 330px;
+    }
+  }
+}

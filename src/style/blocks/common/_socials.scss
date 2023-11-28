@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px -5px;
+
+  & > * {
+    margin: 10px 5px;
+  }
+
+  &__link {
+    display: flex;
+  }
+
+  @include media-min ($xl) {
+    &__link {
+      transition: opacity .2s ease-in-out;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}

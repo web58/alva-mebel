@@ -1,0 +1,28 @@
+:root {
+  --white: #FFFFFF;
+  --metallic-copper: #68231E;
+  --orange-roughy: #df4716;
+  --gray-100: #3D3737;
+  --gray-50: #857F7F;
+  --gold-100: #B29F78;
+  --gold-30: #E7E1D2;
+  --gold-20: #EFEADE;
+  --gold-10: #FEFCF8;
+
+  // colors cascade
+  --theme-text: var(--gray-100);
+  --theme-text-inv: var(--white);
+  --theme-bg: var(--white);
+  --theme-bg-accent: var(--gold-20);
+  --theme-bg-accent-light: var(--gold-10);
+  --accent: var(--metallic-copper);
+  --error: var(--orange-roughy);
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1600px;
+$main-font: "Tilda Sans";
+$mobile-min-width: 360px;

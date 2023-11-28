@@ -1,0 +1,65 @@
+.header-modal {
+  pointer-events: none;
+
+  &[aria-hidden="false"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    z-index: 3;
+    pointer-events: auto;
+
+    & .header-modal__content {
+      display: block;
+
+      @include anim(fade, .3s);
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    color: var(--theme-text);
+    background-color: var(--theme-bg);
+    overflow: auto;
+    padding-top: 90px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  &__nav {
+    margin-bottom: 50px;
+  }
+
+  &__phone {
+    margin-bottom: 16px;
+
+    & a {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--theme-text);
+      text-decoration: none;
+    }
+  }
+
+  &__modal-trigger {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 500;
+    display: inline-block;
+    padding: 4px 12px;
+    color: var(--theme-text-inv);
+    background-color: var(--accent);
+    border-radius: 99em;
+  }
+
+  @include media-min ($xl) {
+    display: none;
+  }
+}

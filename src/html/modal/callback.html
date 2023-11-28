@@ -1,0 +1,39 @@
+<div class="title-md modal__title">Заказать звонок</div>
+<form class="form modal__form"
+      id="callback-modal-form"
+      data-validate>
+  <input type="hidden"
+         name="Страница"
+         value="Название">
+  <input type="hidden"
+         name="Форма"
+         value="Заказать звонок">
+  <div>
+    <input class="form__input"
+           type="text"
+           name="Имя"
+           placeholder="Ваше имя"
+           data-validate="name"
+           required>
+  </div>
+  <div>
+    <input class="form__input"
+           type="tel"
+           name="Контактный&nbsp;телефон"
+           placeholder="+7 (___) ___-__-__"
+           data-validate="phone"
+           required>
+  </div>
+  <div>
+    <input class="form__checkbox"
+           type="checkbox"
+           id="callback-modal-confirm"
+           data-validate="confirm"
+           required>
+    <label for="callback-modal-confirm">@include('../common/confirm-text.html')</label>
+  </div>
+  <div class="modal__submit">
+    <button class="btn-reset btn"
+            type="submit">Отправить</button>
+  </div>
+</form>

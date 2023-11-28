@@ -1,0 +1,38 @@
+.catalog-tabs-nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  overflow-x: auto;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 0;
+    height: 0;
+  }
+
+  &__btn {
+    display: inline-flex;
+    margin-right: 20px;
+    padding: 8px 24px;
+    color: var(--theme-text);
+    background-color: var(--theme-bg);
+    border: 1px solid var(--gold-100);
+    border-radius: 99em;
+    white-space: nowrap;
+
+    &[aria-selected="true"] {
+      color: var(--theme-text-inv);
+      background-color: var(--gold-100);
+    }
+  }
+
+  @include media-min ($lg) {
+    justify-content: center;
+  }
+}

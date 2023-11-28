@@ -1,0 +1,16 @@
+<div data-tabs="panel">
+  <div class="catalog-slider slider">
+    <div class="swiper-wrapper slider__wrapper">
+      @include('../common/catalog-card.html', { tag: 'div', addClass: 'swiper-slide', img: 'chair1.jpg', title: 'Валенсия'})
+      @include('../common/catalog-card.html', { tag: 'div', addClass: 'swiper-slide', img: 'chair2.jpg', title: 'Валенсия Кант'})
+      @include('../common/catalog-card.html', { tag: 'div', addClass: 'swiper-slide', img: 'chair3.jpg', title: 'Аура'})
+      @include('../common/catalog-card.html', { tag: 'div', addClass: 'swiper-slide', img: 'chair4.jpg', title: 'Аура Кант'})
+    </div>
+    <div class="catalog-slider__controls">@include('../common/slider-controls.html')</div>
+    <div class="catalog-slider__pagination slider__pagination"></div>
+  </div>
+  <div class="mp-catalog__cat-link">
+    <a class="btn"
+       href="#">Смотреть все</a>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+.mp-catalog {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  color: var(--theme-text);
+  background-color: var(--theme-bg-accent-light);
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+  }
+
+  &__cat-link {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__cat-link {
+      margin-top: 60px;
+    }
+  }
+
+  @include media-min ($xxl) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    &__cat-link {
+      margin-top: 80px;
+    }
+  }
+}

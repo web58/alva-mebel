@@ -1,0 +1,61 @@
+.offer {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  color: var(--theme-text);
+  background-color: var(--theme-bg-accent-light);
+
+  &__title {
+    --title-color: var(--gold-100);
+
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
+    justify-items: start;
+    margin-bottom: 40px;
+  }
+
+  &__banner-text {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    @include cms-text;
+
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    text-align: center;
+  }
+
+  @include media-min ($md) {
+    padding-top: 70px;
+    padding-bottom: 80px;
+
+    &__list {
+      margin-bottom: 0;
+    }
+
+    &__btn {
+      text-align: left;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+
+    &__banner-text {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 140px;
+    padding-bottom: 120px;
+  }
+}

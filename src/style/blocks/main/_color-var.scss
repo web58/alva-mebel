@@ -1,0 +1,13 @@
+.color-var {
+  &__title {
+    --title-color: var(--gold-100);
+
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    &>li {
+      display: inline;
+    }
+  }
+}
